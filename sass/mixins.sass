@@ -1,0 +1,30 @@
+=rounded( $r1, $r2, $r3, $r4 )
+  border-radius: $r1
+  ccborderradius: $r1
+  -moz-border-radius-topleft: $r1
+  -moz-border-radius-topright: $r2
+  -moz-border-radius-bottomright: $r3
+  -moz-border-radius-bottomleft: $r4
+  -webkit-border-top-left-radius: $r1
+  -webkit-border-top-right-radius: $r2
+  -webkit-border-bottom-right-radius: $r3
+  -webkit-border-bottom-left-radius: $r4
+
+=boxshadow($x,$y,$blur,$color)
+  -webkit-box-shadow: $x $y $blur $color
+  -moz-box-shadow: $x $y $blur $color
+  box-shadow: $x $y $blur $color
+
+=grad($start, $end)
+  background-image: -moz-linear-gradient(100% 100% 90deg, $end, $start)
+  background-image: -webkit-gradient(linear, 0% 0%, 0% 100%, from($start), to($end))
+  filter: progid:DXImageTransform.Microsoft.gradient(startColorstr=#{to_hex($start)},endColorstr=#{to_hex($end)})
+  zoom: 1
+  
+=opacity($v)
+  opacity: $v
+  filter: progid:DXImageTransform.Microsoft.Alpha(Opacity=#{$v * 100})
+  filter: alpha(opacity=$v * 100)
+  
+=pngfix()
+  behavior: url(#{$scripts}/iepngfix/iepngfix.htc)

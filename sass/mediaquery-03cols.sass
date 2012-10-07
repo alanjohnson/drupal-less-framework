@@ -1,0 +1,73 @@
+//  Less Framework 4 Overrides 
+//  THIS FILE IS FOR 3 COLUMNS LAYOUT DEFINITIONS ONLY
+//  NO HEIGHTS, WIDTHS, PADDINGS OR MARGINS THAT WON'T BE APPLICABLE FOR 320px SCREEN RESOLUTION */
+   
+//  Mobile Layout: 320px.
+//  Gutters: 24px.
+//  Outer margins: 34px.
+//  Inherits styles from: Default Layout. */
+//  ---------------------------------------------
+//  cols    1     2      3
+//  px      68    160    252    */
+
+/* Style adjustments for iPhone portrait mode (320 width devices) */
+@media only screen and (max-width: 463px)
+  #page-wrapper
+    width: 320px
+
+  /******* CONTENT AREA STYLES *******/
+  #main-wrapper
+    position: relative
+    width: auto
+    height: 100%
+  
+  .no-sidebars #content
+    width: 300px
+    padding: 12px 10px 10px 10px
+    position: relative
+  
+  .sidebar-left #content
+    width: 300px
+    padding: 12px 10px 10px 10px
+    position: relative
+  
+  .sidebar-right #content
+    width: 300px
+    padding: 12px 10px 10px 10px
+    position: relative
+  
+  .two-sidebars #content
+    width: 300px
+    padding: 12px 10px 10px 10px
+    position: relative
+  
+  /******* SIDEBAR STYLES *******/
+  #sidebar-left-region
+    position: relative
+    width: 300px
+    padding: 12px 10px 10px 10px
+  
+  #sidebar-right-region
+    position: relative
+    width: 300px
+    padding: 12px 10px 10px 10px
+
+  /******* ADMIN STYLES *******/
+  .item-list ul li div.coder-normal, .item-list ul li div.coder-warning
+    width: 277px
+  div.theme-info .description
+    display: none
+  .page-admin
+    span.thmr_call .admin
+      .left, .right
+        margin: 0
+        float: none
+        width: 100%
+        clear: both
+  /******* CONTENT REGION STYLES *******/
+  table
+    font-size: 10px
+          
+  /******* MISC STYLES *******/    
+  #user-profile-form img.screenshot, #system-themes-form img.screenshot
+    width: 75px

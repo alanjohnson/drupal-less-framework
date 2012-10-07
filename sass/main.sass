@@ -1,0 +1,468 @@
+@import "paths.sass"
+@import "colors.sass"
+@import "mixins.sass"
+@import "fonts.sass"
+
+/******* GLOBAL STYLES *******/
+// 10 columns at 992 px. For desk­tops, laptops, tablets in landscape orientation, and all old browsers.
+*
+  margin: 0
+  padding: 0
+
+body
+  font: $font-main
+  color: $color-font-main
+  background-color: $color-site-bg
+
+#page-wrapper
+  position: relative
+  text-align: left
+  background-color: $color-page-bg
+  margin: 0 auto
+
+a, a:link, a:visited
+  color: $color-sitelinks
+  text-decoration: none
+#page-wrapper a
+  text-shadow: 0 1px 0 white
+
+a:hover, a:focus
+  color: $color-sitelinks-hover
+  text-decoration: underline
+
+a:active, a.active
+  color: $color-sitelinks-active
+
+h1.title, h1.title a, h1.title a:hover
+  font-family: $font-h1-title
+  color: $color-h1-title
+  margin: 0
+
+h1, h1 a, h1 a:hover
+  font: $font-h1
+  color: $color-sitelinks-hover
+  margin: 0
+
+h2, h3
+  font: $font-h2
+  color:  $color-h2
+  margin: 2px 0 0 0
+  padding: 2px 5px
+
+h2 a, h2 a:hover, .block h3, .block h3 a
+  color: $color-h2-hover
+  margin: 0
+  padding: 0
+
+#sidebar-left-region h2,
+#sidebar-left-region h3,
+#sidebar-right-region h2,
+#sidebar-right-region h3
+  font: $font-h3
+  margin: 0
+  padding: 20px 0 0 0
+  border: none
+
+h4, h5, h6
+  font: $font-h4
+
+p
+  margin-bottom: 10px
+
+strong
+  color: $color-strong
+
+ul li, ol li
+  margin-left: 20px
+.item-list
+  ul li
+    list-style: none
+    margin: 0 0 4px 0
+    div
+      padding: 4px
+fieldset
+  width: 95%
+pre, .collapsible legend
+  word-wrap: break-word
+  white-space: normal 
+
+#user-profile-form
+  .fieldset-wrapper
+    td
+      font-size: 12px
+      div.form-item
+        white-space: normal
+        word-wrap: break-word
+        
+.help-items ul li
+  list-style: none
+  margin: 8px 0
+  word-wrap: break-word
+  border-left: 2px solid $color_page_bg - #222
+  padding-left: 2px
+
+/* catch all: setting image max-width to 100% to keep it within the screen border when browser is smaller (like with iphones) */
+/* setting height to auto to keep the image proportional, rather than just squishing it horizontally.*/
+img
+  max-width: 100% 
+  height: auto
+        
+/******* SYSTEM MESSAGE STYLES *******/
+div.messages, div.help
+  padding: 15px
+  +boxshadow(0px, 1px, 3px, #ccc)
+  +rounded(3px, 3px, 3px, 3px)
+  margin: 10px
+
+div.status, #content table tbody tr.status
+  background: $color-status-bg
+  color: $color-status-font
+div.status
+  border: 5px solid $color-status-border
+
+div.error, #content table tbody tr.error
+  background: $color-error-bg
+  color: $color-error-font
+div.error
+  border: 5px solid $color-error-border
+  
+div.warning, #content table tbody tr.warning
+  background: $color-warning-bg
+  color: $color-warning-font
+div.warning
+  border: 5px solid $color-warning-border
+
+div.help
+  background: $color_page_bg + #111
+  border: 5px solid $color_page_bg - #111
+/******* HEADER STYLES *******/
+#header-wrapper
+  position: relative
+  display: block
+  height: 120px
+  
+#logo
+  float: left
+  margin: 5px 0 0 12px
+
+#sitename
+  float: left
+  margin-top: 30px
+
+#sitename h1 a
+  font: $font-sitename
+  color: $color-sitename
+  margin-left: 7px
+  text-decoration: none
+
+#searchbox
+  float: right
+  width: 220px
+  height: 20px
+  margin-top: 10px
+  margin-right: 0px
+
+#search
+  .form-text
+    width: 137px
+    vertical-align: middle
+  .form-submit
+    vertical-align: middle
+
+.breadcrumb
+  padding: 5px 10px
+
+#primary-links
+  position: relative
+  display: block
+  overflow: hidden
+  background-color: $color-primary-links-bg
+  ul
+    padding: 4px 0
+    margin: 0
+    list-style: none
+    float: right
+    li
+      display: inline
+      a, a:visited
+        padding: 3px 10px 0 10px
+        font: $font-primarylinks
+        color: $color-primary-links
+        text-shadow: 1px 1px 2px #000
+        white-space: nowrap
+      a:hover
+        color: $color-primary-links-hover
+
+#secondary-links
+  position: relative
+  display: block
+  height: 20px
+  margin-top: 0
+  background-color: $color-secondary-links-bg
+  overflow: hidden
+  ul
+    list-style: none
+    float: right
+    li
+      display: inline
+      a, a:visited
+        padding: 3px 10px 0 10px
+        font: $font-secondarylinks
+        color: $color-secondary-links
+      a:hover
+        color: $color-secondary-links-hover
+
+#mission
+  clear: both
+  float: left
+  margin-left: 86px
+
+#site-slogan
+  position: absolute
+  left: 113px
+  top: 50px
+
+/******* CONTENT AREA STYLES *******/
+#main-wrapper
+  position: relative
+  overflow: hidden
+  width: auto
+  height: 100%
+
+.no-sidebars #content
+  width: 972px
+  padding: 12px 10px 10px 10px
+  position: relative
+
+.sidebar-left #content
+  width: 762px
+  padding: 12px 10px 10px 5px
+  position: relative
+  float: left
+
+.sidebar-right #content
+  width: 762px
+  padding: 12px 5px 10px 10px
+  position: relative
+  float: left
+
+.two-sidebars #content
+  width: 552px
+  padding: 12px 5px 10px 5px
+  position: relative
+  float: left
+
+div.resizable-textarea
+  width: 100%
+  
+/******* SIDEBAR STYLES *******/
+#sidebar-left-region
+  position: relative
+  float: left
+  width: 200px
+  padding: 0 5px 0 10px
+
+#sidebar-right-region
+  position: relative
+  float: right
+  width: 200px
+  padding: 0 10px 0 5px
+
+/******* FOOTER STYLES *******/
+#footer-region
+  position: relative
+  height: 40px
+  margin: 0 auto
+  clear: both
+  background: $color-footer-bg
+  
+#feed-icons
+  float: left
+  padding: 8px
+
+#footer-text
+  position: relative
+  display: block
+  height: 26px
+  float: right
+  font: $font-footer
+  color: $color-footer-text
+  right: 10px
+  top: 14px
+
+/******* FORM STYLES *******/
+input[type=textarea], input[type=text], input[type=password]
+  width: 100%
+
+input.teaser-button, input.form-submit, #edit-file-wrapper .file-wrapper .button
+  border-color: #DDDDDD #DDDDDD #CCCCCC
+  +rounded(3px, 3px, 3px, 3px)
+  border-style: solid
+  border-width: 1px
+  color: $color-button-font
+  cursor: pointer
+  font-weight: normal
+  padding: 2px 10px
+  text-align: center
+  +boxshadow(0px, 1px, 1px, #ddd)
+  text-shadow: 0 1px 0 #FFFFFF 
+  +grad(#fff, #eee)
+  &:hover, &.hover
+    +grad($color-page-bg - #555, $color-page-bg - #777)
+    color: $color-button-font-hover
+    text-shadow: 0 1px 0  $color-page-bg - #aaa
+
+/* input filed type "file" settings*/
+#edit-file-wrapper
+  .file-wrapper
+    cursor: pointer
+    display: inline-block
+    overflow: hidden
+    position: relative
+    width: 100%
+    .button
+      display: inline-block  
+      float: right
+      position: relative
+      margin: -20px 5px 0 0    
+    input.form-file
+      cursor: pointer
+      font-size: 100px
+      height: 100%
+      width: 100%
+      +opacity(.01)
+      position: absolute
+      z-index: 1
+      &:hover
+        cursor: pointer
+    .file-field-wrapper
+      overflow: hidden
+      margin-right: 80px
+      .file-holder
+        float: left
+
+/******* ADMINISTRATION STYLES *******/
+/* Tabs */
+ul.primary li.active a.active
+  background-color: $color-primarytabs-active
+  border: solid 1px $color-primarytabs
+  border-bottom: $color-page-bg
+  color: $color-primarytabsfont-active
+
+ul.primary
+  background: url("#{$images}/tabs-border.png") scroll left bottom transparent
+  border: medium none
+  margin: 10px 0 5px 0
+  overflow: hidden
+  padding: 0 3px
+  li
+    display: block
+    float: left
+    margin: 4px 5px 0 0
+    vertical-align: bottom
+    a
+      background-color: $color-primarytabs
+      color: $color-primarytabsfont
+      border-color: $color-primarytabs
+      +rounded(6px, 6px, 0px, 0px)
+      display: block
+      float: left
+      font-size: 0.929em
+      height: 1.8em
+      line-height: 1.9em
+      margin: 0
+      padding: 0 10px 3px
+      text-shadow: 0 1px 0 #FFFFFF 
+    a:hover
+      background-color: $color-primarytabs-hover
+      color: $color-primarytabsfont - #444
+
+ul.secondary
+  border-bottom: solid 1px $color-primarytabs
+  padding: 5px 0px 10px 5px
+  li
+    padding: 3px 10px 3px 6px
+    margin: 0
+    &.active a.active
+      border-bottom: solid 1px $color-primarytabs
+    a
+      padding: 4px 10px
+      background: $color-primarytabs
+      +rounded(6px, 6px, 6px, 6px)
+      border: none
+    &.active a.active
+      background: $color-primarytabs + #111
+      border: none
+      &:hover
+        background: $color-primarytabs + #111      
+    a:hover
+      background-color: $color-primarytabs-hover
+      color: $color-primarytabsfont - #444
+
+.update .version-status, .update .project
+  font-size: 12px
+
+.verticaltext
+  width: 1em
+  line-height: 1em
+  text-align: center
+  margin: 0 auto
+  text-transform: uppercase
+  word-wrap: break-word
+  a:hover
+    cursor: pointer
+    text-decoration: none
+th .verticaltext
+  background: $color-page-bg - #222
+  padding: 3px
+  font-weight: bold
+  font-size: 9px
+/******* CONTENT REGION STYLES *******/
+
+table
+  margin: 5px 0
+  width: 100%
+  font-size: 11px
+  background: $color-page-bg - #111
+  thead
+    color: $color-table-thead
+    border-bottom: 3px solid $color-page-bg - #444
+    th
+      vertical-align: bottom
+      padding: 5px
+      background: $color-page-bg - #111
+      color: $color-primarytabsfont
+      font-size: 11px
+      text-shadow: 0 1px 0 #FFFFFF
+      border: none
+  td
+    padding: 0 3px
+
+table tbody tr.odd,
+table tbody tr.odd td.menu-disabled
+  background: $color-page-bg - #222
+  border-bottom: solid 1px $color-border-default
+
+table tbody tr.even,
+table tbody tr.even td.menu-disabled
+  background: $color-page-bg - #111
+  border-bottom: solid 1px $color-border-default
+
+table tr td.region
+  color: $color-table-regionfont
+  background: $color-table-regionbg
+
+#system-themes-form
+  font-size: 11px
+  div.theme-info
+    h2
+      font-size: 11px
+      color: $color-h2 - #444
+    .description
+      padding: 5px
+      
+/******* MEDIA QUERY STYLES *******/
+@import "mediaquery-10cols.sass"
+@import "mediaquery-08cols.sass"
+@import "mediaquery-05cols.sass"
+@import "mediaquery-03cols.sass"

@@ -1,0 +1,17 @@
+name = less
+description = A Drupal starting theme template utilizing the Less Framework(v4) ideology.
+version = 0.1
+core = 6.x
+engine = phptemplate
+
+; Main stylesheet
+stylesheets[all][] = css/main.css
+stylesheets[all][] = css/enhanced.css
+
+; Conditional stylesheets
+
+; Javascript
+scripts[] = js/jQuery.fileInputField.js
+scripts[] = js/custom.js
+
+; Custom regions

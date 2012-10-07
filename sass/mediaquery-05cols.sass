@@ -1,0 +1,57 @@
+//  Less Framework 4 Overrides 
+//  THIS FILE IS FOR 5 COLUMNS LAYOUT DEFINITIONS ONLY
+//  NO HEIGHTS, WIDTHS, PADDINGS OR MARGINS THAT WON'T BE APPLICABLE FOR 480px SCREEN RESOLUTION
+   
+//  Wide Mobile Layout: 480px.
+//  Gutters: 24px.
+//  Outer margins: 22px.
+//  Inherits styles from: Default Layout, Mobile Layout.
+//  ------------------------------------------------------------
+//  cols    1     2      3      4      5
+//  px      68    160    252    344    436
+
+/* Style adjustments for iPhone landscape mode */
+@media only screen and (min-width: 464px) and (max-width: 767px)
+  #page-wrapper
+    width: 480px
+
+  /******* CONTENT AREA STYLES *******/
+  #main-wrapper
+    position: relative
+    width: auto
+    height: 100%
+  
+  .no-sidebars #content
+    width: 460px
+    padding: 12px 10px 10px 10px
+    position: relative
+  
+  .sidebar-left #content
+    width: 460px
+    padding: 12px 10px 10px 10px
+    position: relative
+  
+  .sidebar-right #content
+    width: 460px
+    padding: 12px 10px 10px 10px
+    position: relative
+  
+  .two-sidebars #content
+    width: 460px
+    padding: 12px 10px 10px 10px
+    position: relative
+  
+  /******* SIDEBAR STYLES *******/
+  #sidebar-left-region
+    position: relative
+    width: 460px
+    padding: 12px 10px 10px 10px
+  
+  #sidebar-right-region
+    position: relative
+    width: 460px
+    padding: 12px 10px 10px 10px
+
+  /******* ADMIN STYLES *******/
+  div.theme-info .description
+    display: none

@@ -1,0 +1,58 @@
+//  Less Framework 4 Overrides 
+//  THIS FILE IS FOR 8 COLUMNS LAYOUT DEFINITIONS ONLY
+//  NO HEIGHTS, WIDTHS, PADDINGS OR MARGINS THAT WON'T BE APPLICABLE FOR 768px SCREEN RESOLUTION
+
+//  Tablet Layout: 768px.
+//  Gutters: 24px.
+//  Outer margins: 28px.
+//  Inherits styles from: Default Layout.
+//  -----------------------------------------------------------------
+//  cols    1     2      3      4      5      6      7      8
+//  px      68    160    252    344    436    528    620    712 
+
+@media only screen and (min-width: 768px) and (max-width: 991px)
+  #page-wrapper
+    width: 768px
+
+  /******* CONTENT AREA STYLES *******/
+  #main-wrapper
+    position: relative
+    width: auto
+    height: 100%
+  
+  .no-sidebars #content
+    width: 748px
+    padding: 12px 10px 10px 10px
+    position: relative
+  
+  .sidebar-left #content
+    width: 538px
+    padding: 12px 10px 10px 5px
+    position: relative
+    float: left
+  
+  .sidebar-right #content
+    width: 538px
+    padding: 12px 5px 10px 10px
+    position: relative
+    float: left
+  
+  .two-sidebars #content
+    width: 533px
+    padding: 12px 10px 10px 5px
+    position: relative
+    float: right
+  
+  /******* SIDEBAR STYLES *******/
+  #sidebar-left-region
+    position: relative
+    float: left
+    width: 200px
+    padding: 0 5px 0 10px
+  
+  #sidebar-right-region
+    position: relative
+    clear: both
+    float: left
+    width: 200px
+    padding: 0 5px 0 10px
